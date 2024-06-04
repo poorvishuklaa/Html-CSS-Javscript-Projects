@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Build con</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+
+  <style>
+    * {
+      /* margin: 0;
+        padding: 0; */
+      font-family: sans-serif;
+      /* box-sizing: border-box; */
+    }
+
+    body {
+      background: #c5e0eb;
+    }
+
+    .section-padding {
+      padding: 100px 0;
+    }
+
+    .carousel-item {
+      height: 100vh;
+      min-height: 300px;
+    }
+
+    .carousel-caption {
+      bottom: 220px;
+      z-index: 2;
+
+    }
+
+    .carousel-caption h5 {
+      margin-top: 25px;
+      font-size: 45px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .carousel-caption p {
+      width: 60%;
+      margin: auto;
+      font-size: 18px;
+      line-height: 1.9;
+    }
+
+    .carousel-inner::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: 1;
+      background: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar-nav a {
+      font-size: 15px;
+      font-weight: 500;
+      text-transform: uppercase;
+
+    }
+
+    .navbar-light .navbar-brand {
+      color: #000;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 25px;
+      text-transform: uppercase;
+    }
+
+    .navbar-light .navbar-brand:focus,
+    .navbar-light .navbar-brand:hover {
+      color: black;
+    }
+
+    .w-100 {
+      height: 100vh;
+    }
+
+    .service .card-body {
+      font-size: 50px;
+
+    }
+
+    @media only screen and (min-width: 768px) and (max-width: 991px) {
+      .carousel-caption {
+        bottom: 370px;
+      }
+
+      .carousel-caption p {
+        width: 100%;
+      }
+
+      .card {
+        margin-bottom: 30px;
+      }
+
+      .img-area img {
+        width: 100%;
+      }
+    }
+
+    @media only screen and (max-width: 767px) {
+      .navbar-nav {
+        text-align: center;
+      }
+
+      .carousel-caption {
+        bottom: 125px;
+      }
+
+      .carousel-caption h5 {
+        font-size: 17px;
+      }
+
+      .carousel-caption a {
+        padding: 10px 15px;
+        font-size: 15px;
+      }
+
+      .carousel-caption p {
+        width: 100%;
+        line-height: 1.6;
+        font-size: 12px;
+      }
+
+      .about-text {
+        padding-top: 50px;
+      }
+
+      .card {
+        margin-bottom: 30px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <!---NAV BAR-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#"><span class="text-warning fw-bold">Build</span>Con</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <!--margin-right is replaced by margin-end AND margin-left is replaced by margin-start-->
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#home">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#services">Services</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#portfolio">portfolio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#tram">Team</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!--NAV BAR ENDS-->
+
+  <!--CAROUSEL STARTS-->
+  <div id="carouselExampleCaptions" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+        aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+        aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+        aria-label="Slide 3"></button>
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="project-1-img/home-1.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption ">
+          <h5>Your Dream House</h5>
+          <p>"A house is made with walls and beams; a home is built with love and dreams." ~ Ralph Waldo Emerson"</p>
+          <p><a class="btn btn-warning mt-2">Learn More</a></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="project-1-img/home-2.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Peacefull place</h5>
+          <p>"What good is a dream house if you haven't got a dream?" ~ Julius Shulman."</p>
+          <p><a class="btn btn-warning mt-2">Explore now</a></p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="project-1-img/home-3.jpg" class="d-block w-100" alt="...">
+        <div class="carousel-caption">
+          <h5>Home</h5>
+          <p>"You might be a redneck if your daughter's Barbie's Dream House has a clothesline in the front yard"</p>
+          <p><a class="btn btn-warning mt-2">Book now</a></p>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+
+  <!--CAROUSAL ENDS-->
+
+  <!--about section-->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-4 col-md-12 col-12">
+          <div class="about-img">
+            <img src="project-1-img/about.jpg" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-lg-8 col-md-12 col-12 ps-lg-5 mt-md-5">
+          <div class="about-text">
+            <h2>We provide best quality<br>Services ever</h2>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Est, exercitationem. Neque fugiat vero
+              similique temporibus repellat nisi placeat praesentium doloremque laudantium provident beatae mollitia
+              perferendis molestias autem, voluptates expedita sint? Soluta quo non distinctio incidunt!</p>
+            <a href="#" class="btn btn-warning">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!--ABOUT ENDS-->
+
+  <!--SERVICES SECTION START-->
+  <section id="service" class="service section-padding">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h2>Our services</h2>
+            <p>Lorem ipsum, dolor sit amet consectetur<br> adipisicing elit. Quisquam, quos.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-center text-white bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-subtract"></i>
+              <h3 class="card-title">Best Quality</h3>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptates, magni sint quae,
+                recusandae dolorem delectus eveniet quos porro minus rerum provident, quasi corporis non.</p>
+              <button class="btn btn-warning text-dark">Read more</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-center text-white bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-slack"></i>
+              <h3 class="card-title">Sustainability</h3>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptates, magni sint quae,
+                recusandae dolorem delectus eveniet quos porro minus rerum provident, quasi corporis non.</p>
+              <button class="btn btn-warning text-dark">Read more</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-center text-white bg-dark pb-2">
+            <div class="card-body">
+              <i class="bi bi-playstation"></i>
+              <h3 class="card-title">Integrity</h3>
+              <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. A voluptates, magni sint quae,
+                recusandae dolorem delectus eveniet quos porro minus rerum provident, quasi corporis non.</p>
+              <button class="btn btn-warning text-dark">Read more</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!--SERVICE SECTION ENDS-->
+
+  <!---PORTFOLIO SECTION-->
+  <section id="portfolio" class="portfolio section-padding ">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h2>Our Projects</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur <br>adipisicing elit. repellendus?</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-center bg-light text-dark pb-2">
+            <div class="card-body">
+              <div class=" card-img mb-4">
+                <img src="project-1-img/project-1.jpg" class="img-fluid">
+              </div>
+              <h3 class="card-title">Building Make</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, modi quam. Nobis, quam quo laborum
+                inventore modi enim quae. Aliquid?</p>
+              <button class="btn btn-warning">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-center bg-light text-dark pb-2">
+            <div class="card-body">
+              <div class=" card-img mb-4">
+                <img src="project-1-img/project-2.jpg" class="img-fluid">
+              </div>
+              <h3 class="card-title">New New!</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, modi quam. Nobis, quam quo laborum
+                inventore modi enim quae. Aliquid?</p>
+              <button class="btn btn-warning">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-12 col-lg-4">
+          <div class="card text-center bg-light text-dark pb-2">
+            <div class="card-body">
+              <div class=" card-img mb-4">
+                <img src="project-1-img/project-3.jpg" class="img-fluid">
+              </div>
+              <h3 class="card-title">Advance Buildings</h3>
+              <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quidem, modi quam. Nobis, quam quo laborum
+                inventore modi enim quae. Aliquid?</p>
+              <button class="btn btn-warning">Learn More</button>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+  <!--PORTFOLIO SECTION ENDS-->
+
+  <!--TEAM SECTION-->
+  <section id="team" class="team section-padding">
+    <div class="container">
+
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h5>Our Team</h5>
+            <p>Lorem ipsum dolor sit amet consectetur<br> adipisicing elit. Tempora, dolor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-dark bg-light text-center">
+            <div class="card-body">
+              <div class="card-img mb-4 ">
+                <img src="project-1-img/team-1.jpg" class="rounded-circle">
+              </div>
+              <h3>Jack Wilson</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident distinctio possimus placeat
+                aliquid totam unde sit numquam omnis fugiat, assumenda eos dolor veniam.</p>
+              <p class="social">
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-dark bg-light text-center">
+            <div class="card-body">
+              <div class="card-img mb-4 ">
+                <img src="project-1-img/team-2.jpg" class="rounded-circle">
+              </div>
+              <h3>Chritian dior</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident distinctio possimus placeat
+                aliquid totam unde sit numquam omnis fugiat, assumenda eos dolor veniam.</p>
+              <p class="social">
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-dark bg-light text-center">
+            <div class="card-body">
+              <div class="card-img mb-4 ">
+                <img src="project-1-img/team-3.jpg" class="rounded-circle">
+              </div>
+              <h3>Frank henry</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident distinctio possimus placeat
+                aliquid totam unde sit numquam omnis fugiat, assumenda eos dolor veniam.</p>
+              <p class="social">
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-12 col-md-6 col-lg-3">
+          <div class="card text-dark bg-light text-center">
+            <div class="card-body">
+              <div class="card-img mb-4 ">
+                <img src="project-1-img/team-4.jpg" class="rounded-circle">
+              </div>
+              <h3>Meera Arora</h3>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex provident distinctio possimus placeat
+                aliquid totam unde sit numquam omnis fugiat, assumenda eos dolor veniam.</p>
+              <p class="social">
+                <i class="bi bi-twitter"></i>
+                <i class="bi bi-instagram"></i>
+                <i class="bi bi-facebook"></i>
+                <i class="bi bi-linkedin"></i>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+  <!--TEAM ENDS-->
+
+  <!--CONTACT STARTS-->
+  <section id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="section-header text-center pb-5">
+            <h5>Contact Us</h5>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. <br>Eligendi quisquam vitae ipsum.</p>
+          </div>
+        </div>
+      </div>
+
+      <form>
+        <div class="mb-3">
+          <!-- <label for="exampleInputText" class="form-label">Full Name</label> -->
+          <input type="text" class="form-control" id="exampleInputText" placeholder="full name">
+        </div>
+        <div class="mb-3">
+          <!-- <label for="exampleInputEmail1" class="form-label">Email address</label> -->
+          <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Email">
+        </div>
+        <div class="mb-3">
+          <!-- <label for="exampleInputMessage" class="form-label">Query</label> -->
+          <input type="textarea" class="form-control" id="exampleInputMessage" placeholder="Message">
+        </div>
+        <button type="submit" class="btn btn-warning">Send Now</button>
+      </form>
+    </div>
+  </section>
+
+  <!--FOOTER SECTION-->
+  <footer class="bg-dark p-3 text-center">
+    <div class="container">
+      <p class="text-white">All Right Reserved @BuildCon</p>
+    </div>
+
+  </footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
