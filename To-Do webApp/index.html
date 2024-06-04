@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TO-Do List</title>
+    <style>
+        body{
+            margin:0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        .container{
+            width:100%;
+            min-height:100vh;
+            background: linear-gradient(135deg,#153677,#4e085f);
+            overflow: hidden;
+        }
+        .Todo{
+            background-color: white;
+            border:2px solid black;
+            width:100%;
+            max-width:540px;
+            margin:80px auto;
+            padding:40px 30px 70px 30px;
+            border-radius: 10px;
+        }
+        .row{
+            display: flex;
+            margin:10px 10px;
+            justify-content: space-between;
+            padding-left:20px;
+            background-color: #edeef0;
+            border-radius: 30px;
+        }
+        .row input{
+            flex:1;
+            outline: none;
+            border:none;
+            background-color: transparent;
+            padding:10px;
+            font-size: 18px;
+            caret-color: #153677;
+        }
+        button{
+            background:orange;
+            outline: none;
+            border:none;
+            font-size:15px;
+            padding:16px 50px;
+            border-radius: 15px;
+            cursor: pointer;
+        }
+        ul li{
+            list-style-type:number;
+            cursor: pointer;
+            padding:10px 2px;
+            font-size:18px;
+            user-select: none;
+            position: relative;
+        }
+        ul li span{
+            position: absolute;
+            right:0;
+            top:5px;
+            width:40px;
+            height:40px;
+            color: #101010;
+            line-height: 40px;
+            text-align: center;
+        }
+        ul li span:hover{
+            background-color:#edeef0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="Todo">
+            <h1>To-Do List</h1>
+            <div class="row">
+                <input type="text" id="inputBox" placeholder="Add your text">
+                <button onclick="addTask()">Add</button>
+            </div>
+         
+                <ul id="list">
+                    <!-- <li>TASK1</li> -->
+                    <!-- <li>TASK2</li>
+                    <li>TASK3</li>
+                    <li>TASK4</li>
+                    <li>TASK5</li> -->
+                </ul>
+          
+
+        </div>
+    </div>
+    <script>
+        const inputBox=document.getElementById('inputBox');
+        const listItems=document.getElementById('list');
+        //to add items in list
+        function addTask(){
+            if(inputBox.value===""){
+                alert("You must write something");
+            }
+            else{
+                let li=document.createElement("li");
+                li.innerHTML=inputBox.value;
+                listItems.appendChild(li);
+                //to add cancel symbol
+                let span=document.createElement("span");
+                span.innerHTML="\u00d7";
+                li.appendChild(span);
+            }
+            //to set input empty
+            inputBox.value="";
+            saveData();
+        }
+
+        listItems.addEventListener('click',function(e){
+            if(e.target.tagName==='LI'){
+                e.target.classList.toggle("Checked");
+                saveData();
+            }
+            else if(e.target.tagName==="SPAN"){
+                e.target.parentElement.remove();
+                saveData();
+            }
+        },false);
+
+        function saveData(){
+            localStorage.setItem("data",listItems.innerHTML);
+        }
+        function showTask(){
+            listItems.innerHTML=localStorage.getItem("data");
+        }
+        showTask();
+
+
+        </script>
+</body>
+</html>
