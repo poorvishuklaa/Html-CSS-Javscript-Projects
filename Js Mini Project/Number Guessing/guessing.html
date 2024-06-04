@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number guess game</title>
+    <style>
+        #container{
+            margin:auto;
+            border: 5px solid black;
+            color: white;
+            background-color: hotpink;
+            height:300px;
+            width:500px;
+            text-align: center;
+            padding: 20px;
+        }
+        #userinput{
+            border: 2px solid black;
+        }
+        #againbutton{
+            text-align: center;
+            border: 2px solid black;
+        }
+        #enterbutton{
+            border:2px solid black;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <div id="container">
+        <h3>Guess a number between 1 and 100</h3>
+        <p id="outputText">Enter a number below</p>
+        <input id="userInput">
+        <button id="enterButton">Enter</button>
+        <br><br>
+        <button id="againButton">play again</button>
+    </div>
+    <script>
+        var enterButton=document.getElementById('enterButton');
+        var againbutton=document.getElementById('againButton');
+        var output=document.getElementById('outputText');
+
+        var randomNumber=Math.ceil(Math.random()*100);
+
+        function checkNumber(){
+            var input=document.getElementById('userInput').value;
+            if(input==randomNumber){
+                output.innerHTML="Perfect,you guessed right" + "," + " it was "+ randomNumber;
+                output.style.color="deeppink";
+            }
+            else if(input>randomNumber && input<100){
+                output.innerHTML="you guessed too high";
+            }
+            else if(input<randomNumber && input<100){
+                output.innerHTML="you guessed too low";
+            }
+            else if(input<1){
+                output.innerHTML="Higher,it has to be between 1 and 100";
+            }
+            else if(isNaN(input)){
+                output.innerHtml="That's not a number";
+            }
+            else{
+                outer.innerHTML="Low,it has to be between 1 and 100";
+            }
+
+        }
+        enterButton.addEventListener('click',checkNumber);
+        againButton.addEventListener('click',function(){
+            location.reload();
+        })
+        
+    </script>
+
+</body>
+
+</html>
